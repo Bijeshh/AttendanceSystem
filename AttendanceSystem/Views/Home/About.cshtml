@@ -1,0 +1,10 @@
+﻿@inject IHttpContextAccessor HttpContextAccessor
+@{
+    ViewData["Title"] = "About";
+    Layout="~/Views/Shared/AdminLayout.cshtml";
+    var sessionusername = HttpContextAccessor.HttpContext.Session.GetString("Username");
+}
+<h1>Welcome @sessionusername!</h1>
+<h3>Admin Page</h3>
+<p>Check and control the Attendance System</p>
+

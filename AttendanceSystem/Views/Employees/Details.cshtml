@@ -1,0 +1,26 @@
+﻿@model AttendanceSystem.Models.Employee
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Employee</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a href="@Url.Action("Edit", "Employees", new { id = Model?.Id })">Edit</a> |
+    <a href="@Url.Action("Index", "Employees")">Back to List</a>
+</div>

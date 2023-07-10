@@ -1,0 +1,34 @@
+﻿@model IEnumerable<AttendanceSystem.Models.Employee>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h3>Index</h3>
+
+<p>
+    <a href="@Url.Action("Create", "Employees")">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>
+                    <a href="@Url.Action("Edit", "Employees", new { id = item.Id })">Edit</a> |
+                    <a href="@Url.Action("Details", "Employees", new { id = item.Id })">Details</a> |
+                    <a href="@Url.Action("Delete", "Employees", new { id = item.Id })">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

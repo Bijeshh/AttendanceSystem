@@ -1,0 +1,9 @@
+﻿@inject IHttpContextAccessor httpContextAccessor
+@{
+    ViewData["Title"] = "EmpAbout";
+    Layout = "~/Views/Shared/EmployeeLayout.cshtml";
+    var sessionusername = httpContextAccessor.HttpContext.Session.GetString("Username");
+}
+<h1>Welcome @sessionusername!</h1>
+<h2>Mark your Attendance</h2>
+<p>This is a system for your attendance</p>

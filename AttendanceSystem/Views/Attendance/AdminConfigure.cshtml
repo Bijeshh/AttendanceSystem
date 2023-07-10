@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Admin Configure";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h4>Admin Attendance Configuration</h4>
+<form method="post" asp-action="AdminConfigure">
+    <div class="form-group">
+        <label for="MaxPunchInTime">Max Punch-In Time:</label>
+        <input type="time" class="form-control" name="MaxPunchInTime" id="MaxPunchInTime" required>
+    </div>
+    <div class="form-group">
+        <label for="MaxPunchOutTime">Max Punch-Out Time:</label>
+        <input type="time" class="form-control" name="MaxPunchOutTime" id="MaxPunchOutTime" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>

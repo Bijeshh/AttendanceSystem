@@ -1,0 +1,44 @@
+﻿@{
+    ViewData["Title"] = "Report";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    th, td {
+        padding: 6px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<h1>Report</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Employee Id</th>
+        <th>Employee Name</th>
+        <th>Punch In Time</th>
+        <th>Punch Out Time</th>
+        <th>Max Punch In Time</th>
+        <th>Max Punch Out Time</th>
+    </tr>
+    <tr>
+        <td>@ViewBag.Id</td>
+        <td>@ViewBag.Employee_Id</td>
+        <td>@ViewBag.Name</td>
+        <td>@ViewBag.PunchInTime</td>
+        <td>@ViewBag.PunchOutTime</td>
+        <td>@ViewBag.MaxPunchInTime</td>
+        <td>@ViewBag.MaxPunchOutTime</td>
+    </tr>
+</table>

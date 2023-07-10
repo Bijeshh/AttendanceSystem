@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Status";
+    Layout = "~/Views/Shared/EmployeeLayout.cshtml";
+}
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 50%;
+    }
+
+    th, td {
+        padding: 6px;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+    }
+
+    th {
+        background-color: #f2f2f2;
+    }
+</style>
+
+<h1>Status</h1>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Punch In Time</th>
+        <th>Punch Out Time</th>
+    </tr>
+    <tr>
+        <td>@ViewBag.Id</td>
+        <td>@ViewBag.PunchInTime</td>
+        <td>@ViewBag.PunchOutTime</td>
+    </tr>
+</table>

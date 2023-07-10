@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+    {
+        <label for="username"><b>Username</b></label>
+        <input type="text" name="username" placeholder="Username" />
+        <br />
+        <label for="password"><b>Password</b></label>
+        <input type="password" name="password" placeholder="Password" />
+        <br />
+        <button type="submit">Submit</button>
+        @if (!string.IsNullOrEmpty(ViewBag.Error))
+        {
+            <div class="alert alert-danger">@ViewBag.Error</div>
+        }
+    }
+</div>
